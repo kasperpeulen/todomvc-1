@@ -14,7 +14,8 @@ class TodoStore {
 
   TodoStore() {
     if (store['todos-angular2-dart'] != null) {
-      loadTodos();
+      // not loading from local storage for testing purposes now
+      // loadTodos();
     }
   }
 
@@ -69,7 +70,8 @@ class TodoStore {
   }
 
   void saveTodos() {
-    store['todos-angular2-dart'] = JSON.encode(todos);
+    // not saving for testing purposes now
+    // store['todos-angular2-dart'] = JSON.encode(todos);
   }
 
   void setAllTo(bool completed) =>
